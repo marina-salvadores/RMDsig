@@ -1,7 +1,9 @@
 # RMD signatures
 
+Scripts from study Salvadores and Supek. Nat Cancer (2023) where we characterized the regional mutation risk between individual tumors in a manner independent of cell type. We identified three signatures of regional mutagenesis in genomes of >4000 tumors that reflect domain-scale remodeling of heterochromatin and of the RT program seen across tumors, tissues and cultured cells, and are robustly linked with expression of cell proliferation genes and/or loss of tumor suppresor genes such as RB1 and TP53.
+
 ## 1) window
-We split the genome into 1 megabased windows. We calculate the trinucleotide composition of each 1-Mb window and applied a matching algorithm to reduce the differences between windows. This imperfect matching tells us how many tri-nucleotides contexts in each window we can have to reach a centain tolerance. We applied this filter (remove trinucleotide positions) to our 1 megabased windows to make them more homogeneous and allow comparison across them.
+We split the genome into 1 megabase windows. We calculate the trinucleotide composition of each 1-Mb window and applied a matching algorithm to reduce the differences between windows. This imperfect matching tells us how many tri-nucleotides contexts in each window we can have to reach a centain tolerance. We applied this filter (remove trinucleotide positions) to our 1 megabased windows to make them more homogeneous and allow comparison across them.
 - input: genomic coordinates of the chrs, regions of the genome to remove (black list regions, exonic regions, etc).
 - output: 1 matrix per window with the genomic coordinates of the specific regions selected to match the trinucleotide composition of every window.
 
